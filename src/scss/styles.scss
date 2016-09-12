@@ -1,0 +1,19 @@
+//============================================================
+//
+// Styles SCSS
+//
+// @description
+//   Centralize all the files for the compilation.
+//   The architecture is based on the SMACSS guide to develop websites.
+//   https://smacss.com/
+// @version 1.00
+//
+// @author L.Prandi
+//
+//============================================================
+
+// projects basics
+@import "components/normalize";
+
+// projet modules
+@import "components/modules/facebook";

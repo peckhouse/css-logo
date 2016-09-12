@@ -15,7 +15,7 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('css'))
     .pipe(rename({suffix: '.min'}))
     .pipe(cssnano())
-    .pipe(gulp.dest('../css'))
+    .pipe(gulp.dest('css'))
     .pipe(notify({ message: 'STYLES PREPROCESSED SUCCESSFULLY' }));
 });
 
