@@ -1,0 +1,18 @@
+{
+  "name": "css-logo",
+  "version": "0.0.1",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-ruby-sass": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-cssnano": "latest",
+    "gulp-jshint": "latest",
+    "gulp-uglify": "latest",
+    "gulp-rename": "latest",
+    "gulp-concat": "latest",
+    "gulp-notify": "latest",
+    "gulp-cache": "latest",
+    "del": "latest",
+    "gulp-load-plugins": "latest"
+  }
+}
