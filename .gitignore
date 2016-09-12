@@ -1,6 +1,6 @@
 ### sass ###
-src/.sass-cache/
-src/node_modules/
+.sass-cache/
+node_modules/
 
 ### OSX ###
 .DS_Store
