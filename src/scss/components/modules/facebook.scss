@@ -10,24 +10,179 @@
 //
 //============================================================
 
-$facebook: #3b5998;
-
-.image {
+.facebook {
+  background-color: $facebook;
   border-radius: 100%;
   position: relative;
-  height: 80px;
-  width: 80px;
-}
-
-.facebook {
   text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  outline: 0;
 
-  .image {
+  &__bg-image {
+    margin: -20px 0 0 -20px;
+    position: absolute;
+    height: 40px;
+    opacity: 0.2;
+    width: 40px;
+    left: 50%;
+    top: 50%;
+  }
+
+  &__square-1 {
+    transition: all 0.25s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+
+    background-color: #FFFFFF;
+    position: absolute;
+  }
+
+  &__square-2 {
+    transition: all 0.25s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+
+    background-color: #FFFFFF;
+    position: absolute;
+  }
+
+  &__square-3 {
+    transition: all 0s cubic-bezier(0.860, 0.000, 0.070, 1.000) 0s;
+
     background-color: $facebook;
-    overflow: hidden;
-    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__square-4 {
+    transition: all 0s cubic-bezier(0.860, 0.000, 0.070, 1.000) 0s;
+
+    background-color: #FFFFFF;
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__square-5 {
+    transition: all 0.25s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+
+    background-color: #FFFFFF;
+    position: absolute;
+  }
+
+  &__square-6 {
+    transform: rotate(10deg) translateZ(0);
+
+    background-color: $facebook;
+    position: absolute;
+  }
+
+  &__round-1 {
+    transition: all 0.25s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+
+    background-color: #FFFFFF;
+    position: absolute;
+  }
+
+  &__round-2 {
+    transition: all 0.25s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+
+    background-color: $facebook;
+    position: absolute;
+  }
+
+
+  &--small {
+    height: 30px;
+    width: 30px;
+  }
+
+  &--medium {
+    height: 46px;
+    width: 46px;
+  }
+
+  &--big {
+    height: 80px;
+    width: 80px;
+
+    .facebook {
+      &__square-1 {
+        transition: all 0.25s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+        margin-left: -5px;
+        height: 40px;
+        width: 8px;
+        left: 50%;
+        top: 80px;
+      }
+
+      &__square-2 {
+        transition: all 0.25s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+
+        border-radius: 4px 0 0 0;
+        height: 8px;
+        width: 10px;
+        left: 80px;
+        top: 20px;
+      }
+
+      &__square-3 {
+        transition: all 0s cubic-bezier(0.860, 0.000, 0.070, 1.000) 0s;
+
+        height: 16px;
+        width: 13px;
+        left: 30px;
+        top: 16px;
+      }
+
+      &__square-4 {
+        transition: all 0s cubic-bezier(0.860, 0.000, 0.070, 1.000) 0s;
+
+        height: 10px;
+        width: 10px;
+        left: 38px;
+        top: 22px;
+      }
+
+      &__square-5 {
+        transition: all 0.25s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+
+        height: 8px;
+        width: 20px;
+        left: -20px;
+        top: 32px;
+      }
+
+      &__square-6 {
+        transform: rotate(10deg) translateZ(0);
+
+        height: 8px;
+        width: 10px;
+        left: 50px;
+        top: 33px;
+      }
+
+      &__round-1 {
+        transition: all 0.25s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+
+        border-radius: 8px 0 0 0;
+        margin-left: -5px;
+        height: 12px;
+        width: 8px;
+        top: -20px;
+        left: 50%;
+      }
+
+      &__round-2 {
+        transition: all 0.25s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+
+        border-radius: 2px 0 0 0;
+        height: 4px;
+        width: 6px;
+        left: 82px;
+        top: 28px;
+      }
+    }
 
     &:hover {
+      outline: 0;
 
       .facebook {
 
@@ -77,110 +232,9 @@ $facebook: #3b5998;
         }
       }
     }
-  }
 
-  img {
-    margin: -20px 0 0 -20px;
-    position: absolute;
-    height: 40px;
-    opacity: 0.2;
-    width: 40px;
-    left: 50%;
-    top: 50%;
-  }
-
-
-  &__square-1 {
-    transition: all 0.25s cubic-bezier(0.860, 0.000, 0.070, 1.000);
-
-    background-color: #FFFFFF;
-    position: absolute;
-    margin-left: -5px;
-    height: 40px;
-    width: 8px;
-    left: 50%;
-    top: 80px;
-  }
-
-  &__square-2 {
-    transition: all 0.25s cubic-bezier(0.860, 0.000, 0.070, 1.000);
-
-    background-color: #FFFFFF;
-    border-radius: 4px 0 0 0;
-    position: absolute;
-    height: 8px;
-    width: 10px;
-    left: 80px;
-    top: 20px;
-  }
-
-  &__square-3 {
-    transition: all 0s cubic-bezier(0.860, 0.000, 0.070, 1.000) 0s;
-
-    background-color: $facebook;
-    position: absolute;
-    height: 16px;
-    width: 13px;
-    opacity: 0;
-    left: 30px;
-    top: 16px;
-  }
-
-  &__square-4 {
-    transition: all 0s cubic-bezier(0.860, 0.000, 0.070, 1.000) 0s;
-    background-color: #FFFFFF;
-    position: absolute;
-    height: 10px;
-    width: 10px;
-    opacity: 0;
-    left: 38px;
-    top: 22px;
-  }
-
-  &__square-5 {
-    transition: all 0.25s cubic-bezier(0.860, 0.000, 0.070, 1.000);
-
-    background-color: #FFFFFF;
-    position: absolute;
-    height: 8px;
-    width: 20px;
-    left: -20px;
-    top: 32px;
-  }
-
-  &__square-6 {
-    transform: rotate(10deg) translateZ(0);
-
-    background-color: $facebook;
-    position: absolute;
-    height: 8px;
-    width: 10px;
-    left: 50px;
-    top: 33px;
-  }
-
-  &__round-1 {
-    transition: all 0.25s cubic-bezier(0.860, 0.000, 0.070, 1.000);
-
-    background-color: #FFFFFF;
-    border-radius: 8px 0 0 0;
-    position: absolute;
-    margin-left: -5px;
-    height: 12px;
-    width: 8px;
-    top: -20px;
-    left: 50%;
-  }
-
-  &__round-2 {
-    transition: all 0.25s cubic-bezier(0.860, 0.000, 0.070, 1.000);
-
-    background-color: $facebook;
-    border-radius: 2px 0 0 0;
-    position: absolute;
-    height: 4px;
-    width: 6px;
-    left: 82px;
-    top: 28px;
+    &:focus, &:active {
+      outline: 0;
+    }
   }
 }

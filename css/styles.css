@@ -393,58 +393,87 @@ th {
   padding: 0;
 }
 
-.image {
-  border-radius: 100%;
-  position: relative;
-  height: 80px;
-  width: 80px;
+* {
+  box-sizing: border-box;
+}
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Poiret One", cursive;
+  font-size: 16px;
+}
+
+header {
+  max-width: 1280px;
+  float: none !important;
+  margin: 0 auto;
+}
+header:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.facebook-examples {
+  background-color: #222222;
+  padding: 40px 0;
+}
+.facebook-examples__row {
+  max-width: 1280px;
+  float: none !important;
+  margin: 0 auto;
+}
+.facebook-examples__row:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+.facebook-examples .facebook-example {
+  width: 33.33333%;
+  float: left;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: center;
+}
+.facebook-examples p {
+  width: 100%;
+  float: left;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+p {
+  color: #FFFFFF;
+}
+
+a {
+  text-decoration: underline;
+  color: #FFFFFF;
+}
+a:focus, a:hover, a:active {
+  color: #FFFFFF;
+  outline: 0;
 }
 
 .facebook {
-  text-align: center;
-}
-.facebook .image {
   background-color: #3b5998;
+  border-radius: 100%;
+  position: relative;
+  text-align: center;
   overflow: hidden;
   cursor: pointer;
+  display: block;
+  outline: 0;
 }
-.facebook .image:hover .facebook__square-1 {
-  left: 50%;
-  top: 20px;
-}
-.facebook .image:hover .facebook__square-2 {
-  left: 40px;
-  top: 20px;
-}
-.facebook .image:hover .facebook__square-3 {
-  transition: all 0s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
-  opacity: 1;
-  left: 30px;
-  top: 16px;
-}
-.facebook .image:hover .facebook__square-4 {
-  transition: all 0s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
-  opacity: 1;
-  left: 38px;
-  top: 22px;
-}
-.facebook .image:hover .facebook__square-5 {
-  left: 30px;
-  top: 32px;
-}
-.facebook .image:hover .facebook__square-6 {
-  left: 49px;
-  top: 33px;
-}
-.facebook .image:hover .facebook__round-1 {
-  left: 50%;
-  top: 20px;
-}
-.facebook .image:hover .facebook__round-2 {
-  left: 43px;
-  top: 28px;
-}
-.facebook img {
+.facebook__bg-image {
   margin: -20px 0 0 -20px;
   position: absolute;
   height: 40px;
@@ -457,79 +486,158 @@ th {
   transition: all 0.25s cubic-bezier(0.86, 0, 0.07, 1);
   background-color: #FFFFFF;
   position: absolute;
-  margin-left: -5px;
-  height: 40px;
-  width: 8px;
-  left: 50%;
-  top: 80px;
 }
 .facebook__square-2 {
   transition: all 0.25s cubic-bezier(0.86, 0, 0.07, 1);
   background-color: #FFFFFF;
-  border-radius: 4px 0 0 0;
   position: absolute;
-  height: 8px;
-  width: 10px;
-  left: 80px;
-  top: 20px;
 }
 .facebook__square-3 {
   transition: all 0s cubic-bezier(0.86, 0, 0.07, 1) 0s;
   background-color: #3b5998;
   position: absolute;
-  height: 16px;
-  width: 13px;
   opacity: 0;
-  left: 30px;
-  top: 16px;
 }
 .facebook__square-4 {
   transition: all 0s cubic-bezier(0.86, 0, 0.07, 1) 0s;
   background-color: #FFFFFF;
   position: absolute;
-  height: 10px;
-  width: 10px;
   opacity: 0;
-  left: 38px;
-  top: 22px;
 }
 .facebook__square-5 {
   transition: all 0.25s cubic-bezier(0.86, 0, 0.07, 1);
   background-color: #FFFFFF;
   position: absolute;
-  height: 8px;
-  width: 20px;
-  left: -20px;
-  top: 32px;
 }
 .facebook__square-6 {
   -webkit-transform: rotate(10deg) translateZ(0);
           transform: rotate(10deg) translateZ(0);
   background-color: #3b5998;
   position: absolute;
+}
+.facebook__round-1 {
+  transition: all 0.25s cubic-bezier(0.86, 0, 0.07, 1);
+  background-color: #FFFFFF;
+  position: absolute;
+}
+.facebook__round-2 {
+  transition: all 0.25s cubic-bezier(0.86, 0, 0.07, 1);
+  background-color: #3b5998;
+  position: absolute;
+}
+.facebook--small {
+  height: 30px;
+  width: 30px;
+}
+.facebook--medium {
+  height: 46px;
+  width: 46px;
+}
+.facebook--big {
+  height: 80px;
+  width: 80px;
+}
+.facebook--big .facebook__square-1 {
+  transition: all 0.25s cubic-bezier(0.86, 0, 0.07, 1);
+  margin-left: -5px;
+  height: 40px;
+  width: 8px;
+  left: 50%;
+  top: 80px;
+}
+.facebook--big .facebook__square-2 {
+  transition: all 0.25s cubic-bezier(0.86, 0, 0.07, 1);
+  border-radius: 4px 0 0 0;
+  height: 8px;
+  width: 10px;
+  left: 80px;
+  top: 20px;
+}
+.facebook--big .facebook__square-3 {
+  transition: all 0s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+  height: 16px;
+  width: 13px;
+  left: 30px;
+  top: 16px;
+}
+.facebook--big .facebook__square-4 {
+  transition: all 0s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+  height: 10px;
+  width: 10px;
+  left: 38px;
+  top: 22px;
+}
+.facebook--big .facebook__square-5 {
+  transition: all 0.25s cubic-bezier(0.86, 0, 0.07, 1);
+  height: 8px;
+  width: 20px;
+  left: -20px;
+  top: 32px;
+}
+.facebook--big .facebook__square-6 {
+  -webkit-transform: rotate(10deg) translateZ(0);
+          transform: rotate(10deg) translateZ(0);
   height: 8px;
   width: 10px;
   left: 50px;
   top: 33px;
 }
-.facebook__round-1 {
+.facebook--big .facebook__round-1 {
   transition: all 0.25s cubic-bezier(0.86, 0, 0.07, 1);
-  background-color: #FFFFFF;
   border-radius: 8px 0 0 0;
-  position: absolute;
   margin-left: -5px;
   height: 12px;
   width: 8px;
   top: -20px;
   left: 50%;
 }
-.facebook__round-2 {
+.facebook--big .facebook__round-2 {
   transition: all 0.25s cubic-bezier(0.86, 0, 0.07, 1);
-  background-color: #3b5998;
   border-radius: 2px 0 0 0;
-  position: absolute;
   height: 4px;
   width: 6px;
   left: 82px;
   top: 28px;
+}
+.facebook--big:hover {
+  outline: 0;
+}
+.facebook--big:hover .facebook__square-1 {
+  left: 50%;
+  top: 20px;
+}
+.facebook--big:hover .facebook__square-2 {
+  left: 40px;
+  top: 20px;
+}
+.facebook--big:hover .facebook__square-3 {
+  transition: all 0s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+  opacity: 1;
+  left: 30px;
+  top: 16px;
+}
+.facebook--big:hover .facebook__square-4 {
+  transition: all 0s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+  opacity: 1;
+  left: 38px;
+  top: 22px;
+}
+.facebook--big:hover .facebook__square-5 {
+  left: 30px;
+  top: 32px;
+}
+.facebook--big:hover .facebook__square-6 {
+  left: 49px;
+  top: 33px;
+}
+.facebook--big:hover .facebook__round-1 {
+  left: 50%;
+  top: 20px;
+}
+.facebook--big:hover .facebook__round-2 {
+  left: 43px;
+  top: 28px;
+}
+.facebook--big:focus, .facebook--big:active {
+  outline: 0;
 }

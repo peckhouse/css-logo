@@ -15,5 +15,10 @@
 // projects basics
 @import "components/normalize";
 
+
+//website global
+@import "components/variables";
+@import "components/layout";
+
 // projet modules
 @import "components/modules/facebook";
