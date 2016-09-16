@@ -417,11 +417,13 @@ th {
   top: 20px;
 }
 .facebook .image:hover .facebook__square-3 {
+  transition: all 0s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+  opacity: 1;
   left: 30px;
   top: 16px;
 }
 .facebook .image:hover .facebook__square-4 {
-  transition: all 0s cubic-bezier(0.86, 0, 0.07, 1) 0.25s;
+  transition: all 0s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
   opacity: 1;
   left: 38px;
   top: 22px;
@@ -446,6 +448,7 @@ th {
   margin: -20px 0 0 -20px;
   position: absolute;
   height: 40px;
+  opacity: 0.2;
   width: 40px;
   left: 50%;
   top: 50%;
@@ -463,17 +466,20 @@ th {
 .facebook__square-2 {
   transition: all 0.25s cubic-bezier(0.86, 0, 0.07, 1);
   background-color: #FFFFFF;
+  border-radius: 4px 0 0 0;
   position: absolute;
-  width: 10px;
   height: 8px;
+  width: 10px;
   left: 80px;
   top: 20px;
 }
 .facebook__square-3 {
+  transition: all 0s cubic-bezier(0.86, 0, 0.07, 1) 0s;
   background-color: #3b5998;
   position: absolute;
   height: 16px;
   width: 13px;
+  opacity: 0;
   left: 30px;
   top: 16px;
 }
@@ -503,7 +509,7 @@ th {
   position: absolute;
   height: 8px;
   width: 10px;
-  left: 49px;
+  left: 50px;
   top: 33px;
 }
 .facebook__round-1 {
@@ -513,7 +519,7 @@ th {
   position: absolute;
   margin-left: -5px;
   height: 12px;
-  width: 6px;
+  width: 8px;
   top: -20px;
   left: 50%;
 }
