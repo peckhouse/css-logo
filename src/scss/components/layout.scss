@@ -1,0 +1,59 @@
+//============================================================
+//
+// Layout SCSS
+//
+// @description
+//   Presentation page global layout CSS
+// @version 1.00
+//
+// @author L.Prandi
+//
+//============================================================
+
+
+@mixin grid() {
+  max-width: $grid-width + px;
+  margin: 0 auto;
+
+  &:after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+}
+
+@mixin grid-column($nb-column, $gutter: true) {
+  width: ((100 / $nb-grid-column) * $nb-column) *1%;
+  float: left;
+
+  @if $gutter {
+    padding-right: $column-gutter + px;
+    padding-left: $column-gutter + px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+
+  &:before, &:after {
+    box-sizing: border-box;
+  }
+}
+
+html, body {
+  -webkit-font-smoothing: antialiased;
+  font-family: $poiret-one;
+
+  .facebook {
+    @include grid-column(4, false);
+  }
+}
+
+header, main {
+  @include grid();
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0;
+}
